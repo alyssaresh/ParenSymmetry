@@ -4,7 +4,23 @@ import java.util.List;
 public class ParenSymmetry {
 
     public Boolean isBalanced(String s) {
-        return null;
+        String str = s;
+        char paren = '(';
+        char thesis = ')';
+        int parenCount = 0;
+        int thesisCount = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == paren) {
+                parenCount++;
+            } else if (str.charAt(i) == thesis) {
+                thesisCount++;
+            }
+        }
+            if (parenCount == thesisCount) {
+                return true;
+            } else {
+                return false;
+            }
     }
 
     private void checkFile(String filename) {
